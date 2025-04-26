@@ -7,7 +7,7 @@ const CreateKintaiApi = async (data: KintaiData) => {
     try {
         const response = await axios.post(`http://${API_URL}/api/v1/attendance_posts`, {
             user_id: data.user_id,
-            start_time: data.start_time
+            start_time: data.time
         })
 
         return response.data

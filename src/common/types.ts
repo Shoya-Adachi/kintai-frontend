@@ -5,6 +5,7 @@ export type LoginFormInputs = {
 };
 
 export type KintaiData = {
-  user_id: string | null,
-  start_time: string;
+  kintai_id?: string | null,
+  user_id?: string | null,
+  time: string;
 }
