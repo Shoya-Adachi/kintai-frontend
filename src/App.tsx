@@ -1,13 +1,15 @@
-import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LoginnPage from './pages/login/LoginPage'
 import ErrorPage from './pages/error/ErrorPage'
 import KintaiInputPage from './pages/kintai_input/KintaiInputPage'
+import { ThemeProvider } from '@mui/material'
+import { kintaitheme } from './theme'
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <ThemeProvider theme={kintaitheme}>
+       <BrowserRouter>
       <Routes>
         <Route path={'/'} element={<LoginnPage/>}></Route>
         <Route path={'/home'} element={<KintaiInputPage/>}></Route>
@@ -15,6 +17,8 @@ function App() {
         <Route path={'*'} element={<ErrorPage/>}></Route>
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
+   
   )
 }
 

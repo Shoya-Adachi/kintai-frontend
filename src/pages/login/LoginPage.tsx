@@ -15,6 +15,7 @@ const onSubmit = async (data:LoginFormInputs) => {
 
          // トークンをlocalStorageに保存
         localStorage.setItem("token", response.token);
+        localStorage.setItem("user_id", response.user_id);
 
          navigate("/home")
         
